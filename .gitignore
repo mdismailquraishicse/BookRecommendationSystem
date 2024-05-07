@@ -2,3 +2,5 @@ data/
 preprocessed_data/
 .ipynb_checkpoints/
 __pycache__/
+similarity_columns.pkl
+similarity_score.pkl

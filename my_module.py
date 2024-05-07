@@ -8,19 +8,22 @@ def knowYourData(df):
   print('Columns:')
   print(list(df.columns))
 # This function removes punctuations and integers from a given sentence.
-def remove_punctuations_and_integers(text):
+def remove_punctuations(text):
     ''' Enter texts '''
     punc= list(string.punctuation)
-    new_text= []
     result = ''
-    for t in text.split():
-        if t.isnumeric()==False:
-            new_text.append(t)
-    new_text= ' '.join(new_text)
-    for i in new_text:
+    for i in text:
         if i not in punc:
             result += i
     return result.lower()
+# This function removes integers
+def removeIntegers(text):
+    result= []
+    text= text.split()
+    for t in text:
+        if t.isnumeric() == False:
+            result.append(t)
+    return ' '.join(result)
 # This function is used for stemming
 def stemming(text):
     ''' Enter texts '''
