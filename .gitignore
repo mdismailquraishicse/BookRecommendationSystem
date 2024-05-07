@@ -4,3 +4,5 @@ preprocessed_data/
 __pycache__/
 similarity_columns.pkl
 similarity_score.pkl
+dict_required.pkl
+templates/
