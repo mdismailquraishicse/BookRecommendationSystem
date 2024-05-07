@@ -1,3 +1,5 @@
+from nltk.stem import SnowballStemmer
+import string
 # This function displays basic details of the dataset
 def knowYourData(df):
   ''' Enter a dataframe '''
@@ -8,7 +10,6 @@ def knowYourData(df):
 # This function removes punctuations and integers from a given sentence.
 def remove_punctuations_and_integers(text):
     ''' Enter texts '''
-    import string
     punc= list(string.punctuation)
     new_text= []
     result = ''
@@ -20,3 +21,11 @@ def remove_punctuations_and_integers(text):
         if i not in punc:
             result += i
     return result.lower()
+# This function is used for stemming
+def stemming(text):
+    ''' Enter texts '''
+    result = []
+    ss= SnowballStemmer(language='english')
+    for t in text.split():
+        result.append(ss.stem(t))
+    return ' '.join(result)
