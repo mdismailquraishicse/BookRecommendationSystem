@@ -8,6 +8,7 @@ def knowYourData(df):
 # This function removes punctuations and integers from a given sentence.
 def remove_punctuations_and_integers(text):
     ''' Enter texts '''
+    import string
     punc= list(string.punctuation)
     new_text= []
     result = ''
@@ -18,4 +19,4 @@ def remove_punctuations_and_integers(text):
     for i in new_text:
         if i not in punc:
             result += i
-    return result
+    return result.lower()
